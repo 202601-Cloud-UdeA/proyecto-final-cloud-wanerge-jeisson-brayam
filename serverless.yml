@@ -1,0 +1,37 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: wanerge
+# "app" enables Serverless Framework Dashboard features and sharing them with other Services.
+app: reviews-lambda
+# "service" is the name of this project. This will also be added to your AWS resource names.
+service: reviews-lambda
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: us-east-1
+  environment:
+    TABLE_NAME: store-reviews
+    ALLOWED_ORIGIN: "https://wanergealmanza-miguelserna-danielduque-sistema-gestion-pedidos.vercel.app"
+  apiGateway:
+    apiKeys:
+      - name: vercel-key
+        description: "Solo para el frontend en Vercel"
+
+functions:
+  createReview:
+    handler: src/create.handler
+    events:
+      - http:
+          path: /reviews
+          method: post
+          cors: true
+          private: true
+
+  listReviews:
+    handler: src/list.handler
+    events:
+      - http:
+          path: /reviews
+          method: get
+          cors: true
+          private: true
