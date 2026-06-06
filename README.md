@@ -9,6 +9,14 @@ authorLink: 'https://github.com/serverless'
 authorName: 'Serverless, Inc.'
 authorAvatar: 'https://avatars1.githubusercontent.com/u/13742415?s=200&v=4'
 -->
+Proyecto Final Cloud Computing
+
+Estudiantes:
+
+Wanerge Almanza Velasquez (wanerge.almanzav@udea.edu.co)
+Brayam Aguirre (bcamilo.aguirre@udea.edu.co)
+Jeisson Barrantes (jeisson.barrantes@udea.edu.co)
+
 
 # Serverless Framework Node HTTP API on AWS
 
